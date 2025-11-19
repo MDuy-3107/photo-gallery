@@ -47,7 +47,6 @@ export const PhotosList = () => {
               ))}
             </div>
 
-            {/* Infinite scroll sentinel */}
             <div ref={sentinelRef} className="py-8 text-center">
               {loading && (
                 <div className="space-y-4">

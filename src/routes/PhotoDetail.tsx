@@ -69,7 +69,6 @@ export const PhotoDetail = () => {
   return (
     <Layout>
       <div className="space-y-6">
-        {/* Back button */}
         <Link
           to="/photos"
           className="inline-flex items-center text-gray-600 hover:text-blue-600 transition-colors"
@@ -90,9 +89,7 @@ export const PhotoDetail = () => {
           Back to Photos
         </Link>
 
-        {/* Photo detail content */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Left: Large image */}
           <div className="lg:col-span-2">
             <div className="bg-white rounded-2xl p-4 shadow-lg border border-gray-200">
               <img
@@ -103,7 +100,6 @@ export const PhotoDetail = () => {
             </div>
           </div>
 
-          {/* Right: Info card */}
           <div className="lg:col-span-1">
             <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-200 space-y-6 sticky top-6">
               <div>

@@ -42,23 +42,18 @@ export const useInfinitePhotos = (limit: number = 30): UseInfinitePhotosResult =
     }
   }, [loading, hasMore, page, limit]);
 
-  // Initial load
   useEffect(() => {
     loadMore();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // Intersection Observer callback
   const sentinelRef = useCallback(
     (node: HTMLDivElement | null) => {
       if (loading) return;
 
-      // Disconnect previous observer
       if (observerRef.current) {
         observerRef.current.disconnect();
       }
 
-      // Create new observer
       observerRef.current = new IntersectionObserver(
         (entries) => {
           if (entries[0].isIntersecting && hasMore && !loading) {
@@ -66,11 +61,10 @@ export const useInfinitePhotos = (limit: number = 30): UseInfinitePhotosResult =
           }
         },
         {
-          rootMargin: '200px', // Load before user reaches the bottom
+          rootMargin: '200px',
         }
       );
 
-      // Observe new sentinel
       if (node) {
         observerRef.current.observe(node);
       }
@@ -78,7 +72,6 @@ export const useInfinitePhotos = (limit: number = 30): UseInfinitePhotosResult =
     [loading, hasMore, loadMore]
   );
 
-  // Cleanup observer on unmount
   useEffect(() => {
     return () => {
       if (observerRef.current) {

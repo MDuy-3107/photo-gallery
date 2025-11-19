@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/photo-gallery",
+  "homepage": "https://MDuy-3107.github.io/photo-gallery",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

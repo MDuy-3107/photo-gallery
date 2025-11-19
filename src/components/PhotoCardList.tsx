@@ -10,7 +10,6 @@ export const PhotoCardList = ({ photo }: PhotoCardListProps) => {
 
   return (
     <div className="flex gap-4 bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 p-4">
-      {/* Left: Image - Clickable thumbnail */}
       <Link to={`/photos/${photo.id}`} className="flex-shrink-0 w-48 h-32 rounded-lg overflow-hidden group">
         <img
           src={thumbnailUrl}
@@ -20,7 +19,6 @@ export const PhotoCardList = ({ photo }: PhotoCardListProps) => {
         />
       </Link>
 
-      {/* Right: Info */}
       <div className="flex-1 flex flex-col justify-between py-1">
         <div>
           <h3 className="text-xl font-bold text-gray-900 mb-2">
